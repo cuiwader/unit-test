@@ -157,6 +157,7 @@
     <ClCompile Include="..\producer-consumer\ChunkData.cpp" />
     <ClCompile Include="..\producer-consumer\Consumer.cpp" />
     <ClCompile Include="..\producer-consumer\DataQueue.cpp" />
+    <ClCompile Include="ConsumerTest.cpp" />
     <ClCompile Include="Consumer_test.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

@@ -19,6 +19,7 @@ TEST(Consumer_test, HandlePrimeNumber)
 
 	Consumer consumer(&queue);
 	ASSERT_TRUE(consumer.Consume());
+	ASSERT_EQ(0, queue.Size());
 }
 
 TEST(Consumer_test, HandleBoundaryZero)
@@ -30,5 +31,6 @@ TEST(Consumer_test, HandleBoundaryZero)
 	queue.Inqueue(data);
 
 	Consumer consumer(&queue);
-	ASSERT_FALSE(consumer.Consume());
+	EXPECT_FALSE(consumer.Consume());
+	EXPECT_EQ(0, queue.Size());
 }

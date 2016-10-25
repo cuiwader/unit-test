@@ -19,6 +19,8 @@ namespace producer_consumer
 
 		shared_ptr<ChunkData> Dequeue();
 
+		size_t Size();
+
 		virtual ~DataQueue();
 
 	private:

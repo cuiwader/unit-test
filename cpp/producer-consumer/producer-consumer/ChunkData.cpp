@@ -19,4 +19,5 @@ namespace producer_consumer
 	{
 		return data;
 	}
-}
+
+} // namespace producer_consumer

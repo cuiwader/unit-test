@@ -26,4 +26,9 @@ namespace producer_consumer
 		return data;
 	}
 
+	size_t DataQueue::Size()
+	{
+		return queue.size();
+	}
+
 }  // namespace producer_consumer

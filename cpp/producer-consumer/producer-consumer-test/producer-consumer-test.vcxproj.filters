@@ -33,6 +33,9 @@
     <ClCompile Include="..\producer-consumer\DataQueue.cpp">
       <Filter>Source Files\producer-consumer</Filter>
     </ClCompile>
+    <ClCompile Include="ConsumerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\producer-consumer\ChunkData.h">
