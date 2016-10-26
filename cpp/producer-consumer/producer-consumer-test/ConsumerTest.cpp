@@ -6,9 +6,10 @@
 #include <DataQueue.h>
 #include <Consumer.h>
 
-using namespace producer_consumer;
 using std::vector;
 using std::shared_ptr;
+
+using namespace producer_consumer;
 
 class ConsumerTest : public testing::Test
 {
@@ -39,7 +40,6 @@ TEST_F(ConsumerTest, HandleBoundaryZero)
 {
 	queue.Inqueue(shared_ptr<ChunkData>(new ChunkData({ 0, 0, 0 })));
 
-	Consumer consumer(&queue);
 	EXPECT_FALSE(consumer.Consume());
 	EXPECT_EQ(0, queue.Size());
 }

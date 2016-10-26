@@ -8,7 +8,7 @@ namespace producer_consumer
 	class Consumer
 	{
 	public:
-		Consumer(DataQueue* queue);
+		Consumer(AbstractDataQueue* queue);
 
 		virtual ~Consumer();
 
@@ -20,7 +20,7 @@ namespace producer_consumer
 	private:
 		bool IsPrime(unsigned int n);
 
-		DataQueue* queue;
+		AbstractDataQueue* queue;
 	}; // class Consumer
 
 }  // namespace producer_consumer

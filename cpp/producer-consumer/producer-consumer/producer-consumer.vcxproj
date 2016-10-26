@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractDataQueue.h" />
     <ClInclude Include="ChunkData.h" />
     <ClInclude Include="Consumer.h" />
     <ClInclude Include="DataQueue.h" />

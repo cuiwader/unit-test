@@ -2,7 +2,7 @@
 
 namespace producer_consumer {
 
-	Consumer::Consumer(DataQueue* queue)
+	Consumer::Consumer(AbstractDataQueue* queue)
 		: queue(queue)
 	{
 	}

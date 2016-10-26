@@ -36,6 +36,9 @@
     <ClCompile Include="ConsumerTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ConsumerTestMock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\producer-consumer\ChunkData.h">
@@ -46,6 +49,12 @@
     </ClInclude>
     <ClInclude Include="..\producer-consumer\DataQueue.h">
       <Filter>Source Files\producer-consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\producer-consumer\AbstractDataQueue.h">
+      <Filter>Source Files\producer-consumer</Filter>
+    </ClInclude>
+    <ClInclude Include="MockDataQueue.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

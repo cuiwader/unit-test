@@ -24,6 +24,9 @@
     <ClInclude Include="Consumer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AbstractDataQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChunkData.cpp">

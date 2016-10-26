@@ -4,22 +4,23 @@
 #include <queue>
 
 #include "ChunkData.h"
+#include "AbstractDataQueue.h"
 
 using std::queue;
 using std::shared_ptr;
 
 namespace producer_consumer
 {
-	class DataQueue
+	class DataQueue : public AbstractDataQueue
 	{
 	public:
 		DataQueue();
 
-		void Inqueue(shared_ptr<ChunkData>);
+		virtual void Inqueue(shared_ptr<ChunkData>) override;
 
-		shared_ptr<ChunkData> Dequeue();
+		virtual shared_ptr<ChunkData> Dequeue() override;
 
-		size_t Size();
+		virtual size_t Size() const override;
 
 		virtual ~DataQueue();
 

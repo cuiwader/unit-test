@@ -71,8 +71,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\code\googletest\googletest\include;C:\code\unit-test\cpp\producer-consumer\producer-consumer;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\code\googletest\googletest\msvc\gtest\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\code\googletest\googletest\include;C:\code\googletest\googlemock\include;C:\code\unit-test\cpp\producer-consumer\producer-consumer;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\code\googletest\googletest\msvc\gtest\Debug;C:\code\googletest\googlemock\msvc\2015\Debug;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -96,11 +97,10 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <Profile>true</Profile>
+      <AdditionalDependencies>gtestd.lib;gmock.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>$(TargetDir)\$(TargetName).exe</Command>
+      <Command>$(TargetDir)$(TargetName).exe</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -158,13 +158,16 @@
     <ClCompile Include="..\producer-consumer\Consumer.cpp" />
     <ClCompile Include="..\producer-consumer\DataQueue.cpp" />
     <ClCompile Include="ConsumerTest.cpp" />
+    <ClCompile Include="ConsumerTestMock.cpp" />
     <ClCompile Include="Consumer_test.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\producer-consumer\AbstractDataQueue.h" />
     <ClInclude Include="..\producer-consumer\ChunkData.h" />
     <ClInclude Include="..\producer-consumer\Consumer.h" />
     <ClInclude Include="..\producer-consumer\DataQueue.h" />
+    <ClInclude Include="MockDataQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

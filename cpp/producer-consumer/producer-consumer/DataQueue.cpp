@@ -26,7 +26,7 @@ namespace producer_consumer
 		return data;
 	}
 
-	size_t DataQueue::Size()
+	size_t DataQueue::Size() const
 	{
 		return queue.size();
 	}
