@@ -14,7 +14,7 @@ namespace producer_consumer
 
 		virtual ~ChunkData();
 
-		const vector<unsigned int>& GetData();
+		const vector<unsigned int>& GetData() const;
 
 	private:
 		vector<unsigned int> data;

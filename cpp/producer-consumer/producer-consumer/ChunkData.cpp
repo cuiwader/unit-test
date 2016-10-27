@@ -15,7 +15,7 @@ namespace producer_consumer
 	{
 	}
 
-	const vector<unsigned int>& ChunkData::GetData()
+	const vector<unsigned int>& ChunkData::GetData() const
 	{
 		return data;
 	}

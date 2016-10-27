@@ -73,7 +73,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>C:\code\googletest\googletest\include;C:\code\googletest\googlemock\include;C:\code\unit-test\cpp\producer-consumer\producer-consumer;$(IncludePath)</IncludePath>
     <LibraryPath>C:\code\googletest\googletest\msvc\gtest\Debug;C:\code\googletest\googlemock\msvc\2015\Debug;$(LibraryPath)</LibraryPath>
-    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
